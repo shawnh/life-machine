@@ -9,6 +9,7 @@
 import Cocoa
 
 extension Array where Iterator.Element == Organism {
+    
     func countAlive() -> Int {
         var count = 0
         for o in self {
@@ -18,6 +19,7 @@ extension Array where Iterator.Element == Organism {
         }
         return count
     }
+    
 }
 
 class Organism: NSObject {
@@ -39,7 +41,6 @@ class Organism: NSObject {
     var COLORS = [[Int]]()
     
     let RAND = LMRandomGenerator()
-    //var genes = [Double]()
     var complexity = 0
     var speedFactor = 4.0
     

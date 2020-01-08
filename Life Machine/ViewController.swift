@@ -9,7 +9,6 @@
 import Cocoa
 
 class ViewController: NSViewController, NSWindowDelegate {
-
     var tick = 0.05
     var timer: Timer?
     
@@ -34,4 +33,5 @@ class ViewController: NSViewController, NSWindowDelegate {
         // Update the view, if already loaded.
         }
     }
+    
 }

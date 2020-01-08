@@ -228,10 +228,12 @@ class World: NSObject {
                 organism.health = 0
                 organism.isAlive = false
             }
+            
             if showWaves {
                 generateOrganismWave(organism: organism, bitmap: &bitmap)
                 drawOrgCycleIndicator(organism: organism, t: time, bitmap: &bitmap)
             }
+            
             if organism.myID == watchID {
                 watchIndex = i
             }
@@ -315,17 +317,8 @@ class World: NSObject {
             f = []
             G.reset()
             STATS.reset()
-            //STATS.setScreenBounds(width: WIDTH, height: HEIGHT)
             orgCount = 0
             for _ in 0...ORGANISMS {
-                //
-                // Random genes for each organism
-                //
-//                genePool = Array(repeating: 0.0, count: GENE_COUNT + 1)
-//                for (i, _) in genePool.enumerated() {
-//                    genePool[i] = RAND.getNormalisedGaussRand
-//                }
-                
                 let newO = Organism()
                 newO.create(width: WIDTH, height: HEIGHT, homeX: MX, homeY: MY, homeR: HOME_RADIUS)
                 newO.myID = orgCount

@@ -144,4 +144,5 @@ class Genealogy: NSObject {
         let text = generateTreeStringRep()
         text.draw(in: textRect, withAttributes: textFontAttributes as [NSAttributedString.Key : Any])
     }
+    
 }

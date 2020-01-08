@@ -9,6 +9,7 @@
 import Cocoa
 
 extension Array where Iterator.Element == Food {
+    
     func countHasEnergy() -> Int {
         var count = 0
         for f in self {
@@ -18,6 +19,7 @@ extension Array where Iterator.Element == Food {
         }
         return count
     }
+    
 }
 
 class Food: NSObject {

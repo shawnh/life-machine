@@ -47,7 +47,6 @@ class GraphView: NSView {
     
     func toggleRunning() {
         WORLD.RUNNING = (WORLD.RUNNING == true) ? false : true
-        print("RUNNING: " + String(WORLD.RUNNING))
     }
     
     override func mouseDown(with event: NSEvent) {

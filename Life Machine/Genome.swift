@@ -47,21 +47,18 @@ class Gene {
             }
         }
     }
+    
 }
 
 class GeneGroup {
     //
-    // Link genes together
-    // Trade off between value adjustments
-    // Resistance in links to calculate changes
+    // TODO: Implement:
+    //  Trade off between value adjustments
+    //  Resistance in links to calculate changes
     //
     var link: [Gene]
     var resistance: [Double]
     var RAND = LMRandomGenerator()
-    
-    func sigmoid(_ v: Double) -> Double {
-        return 1.0 / (1.0 + exp(-v))
-    }
     
     public func getValue() -> Double {
         return (link[0].getValue() + link[1].getValue() + link[2].getValue()) / 3
@@ -118,4 +115,5 @@ class Genome {
             }
         }
     }
+    
 }

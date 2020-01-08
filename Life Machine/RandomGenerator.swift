@@ -34,19 +34,27 @@ class LMRandomGenerator {
         cachedNumberExists = !cachedNumberExists
         return x
     }
+    
     var getRand: Double {
         return 1 - (self.gaussRand / 5.5)
     }
+    
     var getRandRand: Double {
         return Double(arc4random()) / Double(UINT32_MAX)
     }
+    
     var getNormalisedGaussRand: Double {
         return sigmoid(self.gaussRand)
     }
+    
     public func getRandInt(_ low: Int, _ high: Int) -> Int {
         return Int.random(in: low...high)
     }
+    
     public func getPRandom(t: Double) -> Double {
+        //
+        // TODO: Actually finish this
+        //
         var v = t
         while v > 16 {
             v = v / 16
@@ -65,4 +73,5 @@ class LMRandomGenerator {
         print(t, y)
         return y
     }
+    
 }

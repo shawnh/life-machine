@@ -9,7 +9,6 @@
 import Cocoa
 
 class Statistics: NSObject {
-
     var HISTORY_LENGTH = 100
     var BAR_WIDTH = 2.0
     var PANEL_WIDTH = 300.0
@@ -43,7 +42,6 @@ class Statistics: NSObject {
     }
     
     public func render(worldWidth: Double, worldHeight: Double, panelWidth: Double, panelHeight: Double, bitmap: inout NSBitmapImageRep) {
-        
         WIDTH = worldWidth
         HEIGHT = worldHeight
         PANEL_WIDTH = panelWidth
@@ -112,4 +110,5 @@ class Statistics: NSObject {
         organismCount = [Int]()
         foodCount = [Int]()
     }
+    
 }
