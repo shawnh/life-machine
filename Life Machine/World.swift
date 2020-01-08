@@ -151,7 +151,7 @@ class World: NSObject {
     public func forceProcreate() {
         for organism in o {
             let newO = Organism()
-            newO.create(width: WIDTH, height: HEIGHT, homeX: MX, homeY: MY, homeR: HOME_RADIUS, fromParentGenome: organism.GENOME)
+            newO.create(homeX: MX, homeY: MY, homeR: HOME_RADIUS, fromParentGenome: organism.GENOME)
             newO.myID = orgCount
             o.append(newO)
             G.addOrganism(id: orgCount, genes: genePool, parent: organism.myID)
@@ -201,12 +201,12 @@ class World: NSObject {
         
         var didProcreate = false
         for (i, organism) in o.enumerated() {
-            if organism.render(t: time, boxW: WIDTH, boxH: HEIGHT, highlight: (organism.myID == watchID), food: &f, bitmap: &bitmap) {
+            if organism.render(t: time, worldWidth: WIDTH, worldHeight: HEIGHT, homeX: MX, homeY: MY, homeR: HOME_RADIUS, highlight: (organism.myID == watchID), food: &f, bitmap: &bitmap) {
                 print("ID: " + String(organism.myID) + " spawning " + String(organism.eatCount) + " children")
                 
                 for _ in 1...organism.eatCount {
                     let newO = Organism()
-                    newO.create(width: WIDTH, height: HEIGHT, homeX: MX, homeY: MY, homeR: HOME_RADIUS, fromParentGenome: organism.GENOME)
+                    newO.create(homeX: MX, homeY: MY, homeR: HOME_RADIUS, fromParentGenome: organism.GENOME)
                     newO.myID = orgCount
                     o.append(newO)
                     G.addOrganism(id: orgCount, genes: genePool, parent: organism.myID)
@@ -217,7 +217,7 @@ class World: NSObject {
                     if organism.GENOME.genotype[27].getValue() > 0.95 {
                         print("TWINS!")
                         let newO = Organism()
-                        newO.create(width: WIDTH, height: HEIGHT, homeX: MX, homeY: MY, homeR: HOME_RADIUS, fromParentGenome: organism.GENOME)
+                        newO.create(homeX: MX, homeY: MY, homeR: HOME_RADIUS, fromParentGenome: organism.GENOME)
                         newO.myID = orgCount
                         o.append(newO)
                         G.addOrganism(id: orgCount, genes: genePool, parent: organism.myID)
@@ -269,7 +269,7 @@ class World: NSObject {
         STATS.render(worldWidth: WIDTH, worldHeight: HEIGHT, panelWidth: BOTTOM_PANEL_WIDTH, panelHeight: BOTTOM_PANEL_HEIGHT,  bitmap: &bitmap)
         G.render(worldWidth: WIDTH, worldHeight: HEIGHT, panelWidth: BOTTOM_PANEL_WIDTH, panelHeight: BOTTOM_PANEL_HEIGHT,  bitmap: &bitmap)
         
-        watchIndex = (watchIndex > (o.count + 1)) ? 0 : watchIndex
+        watchIndex = (watchIndex > o.count) ? 0 : watchIndex
         
         var hudText = "Time: " + String(time) + " Frame: " + String(frameCount) + "\n"
         hudText = hudText + "Organism: " + String(watchID) + "\n"
@@ -320,7 +320,7 @@ class World: NSObject {
             orgCount = 0
             for _ in 0...ORGANISMS {
                 let newO = Organism()
-                newO.create(width: WIDTH, height: HEIGHT, homeX: MX, homeY: MY, homeR: HOME_RADIUS)
+                newO.create(homeX: MX, homeY: MY, homeR: HOME_RADIUS)
                 newO.myID = orgCount
                 o.append(newO)
                 

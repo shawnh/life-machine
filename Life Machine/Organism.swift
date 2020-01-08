@@ -236,13 +236,20 @@ class Organism: NSObject {
         return (x >= x1 && x <= x2 && y >= y1 && y <= y2)
     }
     
-    public func render(t: Double, boxW: Double, boxH: Double, highlight: Bool, food: inout [Food], bitmap: inout NSBitmapImageRep) -> Bool {
+    public func render(t: Double, worldWidth: Double, worldHeight: Double, homeX: Double, homeY: Double, homeR: Double, highlight: Bool, food: inout [Food], bitmap: inout NSBitmapImageRep) -> Bool {
         if isAlive {
             if eatCount > 1 && isHome() {
                 return true
             }
+            
+            x1 = homeX - homeR
+            x2 = homeX + homeR
+            y1 = homeY - homeR
+            y2 = homeY + homeR
+            hr = homeR
+            
             eatCloseFood(food: &food)
-            (_, _) = getNextLocation(t: t, width: boxW, height: boxH)
+            (_, _) = getNextLocation(t: t, width: worldWidth, height: worldHeight)
             
             Graphics.circle(x, y, radius: 5, color: familyColor, bitmap: &bitmap)
             Graphics.circle(x, y, radius: 9, color: clanColor, bitmap: &bitmap)
@@ -265,7 +272,7 @@ class Organism: NSObject {
         return false
     }
     
-    public func create(width: Double, height: Double, homeX: Double, homeY: Double, homeR: Double, fromParentGenome: Genome? = nil) {
+    public func create(homeX: Double, homeY: Double, homeR: Double, fromParentGenome: Genome? = nil) {
         COLORS.append(GRAY)
         COLORS.append(BLACK)
         COLORS.append(WHITE)
