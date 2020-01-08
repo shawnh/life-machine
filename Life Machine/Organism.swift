@@ -113,7 +113,7 @@ class Organism: NSObject {
             direction = (direction < 0) ? direction + 360 : direction
         } else {
             memoryCurrent -= memoryDegrade
-        }
+        } 
         
         let energy = getDataForTime(t: t, c: complexity) + (GENOME.genotype[20].getValue() * 2)
         var speed = 0.0
@@ -284,7 +284,7 @@ class Organism: NSObject {
         
         complexity = Int(GENOME.genotype[0].getValue() * 7.0)
         direction = GENOME.genotype[1].getValue() * 360
-        speedFactor = GENOME.genotype[2].getValue() * 2.5
+        speedFactor = GENOME.genotype[2].getValue() * 3.5
         
         lookDirection = GENOME.genotype[3].getValue() * 360
         lookDistance = 150 * (GENOME.genotype[4].getValue())
