@@ -8,12 +8,25 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+class ViewController: NSViewController, NSWindowDelegate {
 
+    var tick = 0.05
+    var timer: Timer?
+    
+    @IBOutlet var canvas: GraphView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        canvas.WORLD.tick = tick
+        canvas.WORLD.time = 0.0
+        
+        canvas.WORLD.RUNNING = true
+        timer = Timer.scheduledTimer(timeInterval: tick, target: self, selector: #selector(fireTimer), userInfo: nil, repeats: true)
+    }
 
-        // Do any additional setup after loading the view.
+    @objc func fireTimer() {
+        canvas.needsDisplay = true
     }
 
     override var representedObject: Any? {
@@ -21,7 +34,4 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
-
-
 }
-

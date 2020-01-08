@@ -13,6 +13,16 @@
 		7F96EB19222D0A6E007E4528 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F96EB17222D0A6E007E4528 /* Main.storyboard */; };
 		7F96EB25222D0A6E007E4528 /* Life_MachineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F96EB24222D0A6E007E4528 /* Life_MachineTests.swift */; };
 		7F96EB30222D0A6E007E4528 /* Life_MachineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F96EB2F222D0A6E007E4528 /* Life_MachineUITests.swift */; };
+		7F96EB3E222D0F0D007E4528 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F96EB3D222D0F0D007E4528 /* GraphView.swift */; };
+		7F9C324122337258003773E5 /* Organism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9C324022337258003773E5 /* Organism.swift */; };
+		7FB9BBC92248C02000F237DB /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB9BBC82248C02000F237DB /* WindowController.swift */; };
+		7FDFBCF123B5E4CD0008AD7A /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDFBCF023B5E4CD0008AD7A /* Food.swift */; };
+		7FDFBCF323B9B0C10008AD7A /* RandomGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDFBCF223B9B0C10008AD7A /* RandomGenerator.swift */; };
+		7FDFBCF523BC52380008AD7A /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDFBCF423BC52380008AD7A /* Statistics.swift */; };
+		7FE4022323C1362900C7E0C3 /* Graphics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE4022223C1362900C7E0C3 /* Graphics.swift */; };
+		7FE4022523C13B0F00C7E0C3 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE4022423C13B0F00C7E0C3 /* World.swift */; };
+		7FE4022723C175E700C7E0C3 /* Genealogy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE4022623C175E700C7E0C3 /* Genealogy.swift */; };
+		7FE4022923C27E4400C7E0C3 /* Genome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE4022823C27E4400C7E0C3 /* Genome.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +56,16 @@
 		7F96EB2B222D0A6E007E4528 /* Life MachineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Life MachineUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F96EB2F222D0A6E007E4528 /* Life_MachineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Life_MachineUITests.swift; sourceTree = "<group>"; };
 		7F96EB31222D0A6E007E4528 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F96EB3D222D0F0D007E4528 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		7F9C324022337258003773E5 /* Organism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organism.swift; sourceTree = "<group>"; };
+		7FB9BBC82248C02000F237DB /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
+		7FDFBCF023B5E4CD0008AD7A /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		7FDFBCF223B9B0C10008AD7A /* RandomGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomGenerator.swift; sourceTree = "<group>"; };
+		7FDFBCF423BC52380008AD7A /* Statistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistics.swift; sourceTree = "<group>"; };
+		7FE4022223C1362900C7E0C3 /* Graphics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graphics.swift; sourceTree = "<group>"; };
+		7FE4022423C13B0F00C7E0C3 /* World.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
+		7FE4022623C175E700C7E0C3 /* Genealogy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genealogy.swift; sourceTree = "<group>"; };
+		7FE4022823C27E4400C7E0C3 /* Genome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genome.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,10 +118,20 @@
 			children = (
 				7F96EB11222D0A6C007E4528 /* AppDelegate.swift */,
 				7F96EB13222D0A6C007E4528 /* ViewController.swift */,
+				7FB9BBC82248C02000F237DB /* WindowController.swift */,
 				7F96EB15222D0A6E007E4528 /* Assets.xcassets */,
 				7F96EB17222D0A6E007E4528 /* Main.storyboard */,
 				7F96EB1A222D0A6E007E4528 /* Info.plist */,
 				7F96EB1B222D0A6E007E4528 /* Life_Machine.entitlements */,
+				7F96EB3D222D0F0D007E4528 /* GraphView.swift */,
+				7F9C324022337258003773E5 /* Organism.swift */,
+				7FDFBCF023B5E4CD0008AD7A /* Food.swift */,
+				7FDFBCF223B9B0C10008AD7A /* RandomGenerator.swift */,
+				7FDFBCF423BC52380008AD7A /* Statistics.swift */,
+				7FE4022223C1362900C7E0C3 /* Graphics.swift */,
+				7FE4022423C13B0F00C7E0C3 /* World.swift */,
+				7FE4022623C175E700C7E0C3 /* Genealogy.swift */,
+				7FE4022823C27E4400C7E0C3 /* Genome.swift */,
 			);
 			path = "Life Machine";
 			sourceTree = "<group>";
@@ -187,18 +217,21 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = "Shawn Hamman";
 				TargetAttributes = {
 					7F96EB0D222D0A6C007E4528 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 					7F96EB1F222D0A6E007E4528 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 7F96EB0D222D0A6C007E4528;
 					};
 					7F96EB2A222D0A6E007E4528 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 7F96EB0D222D0A6C007E4528;
 					};
 				};
@@ -254,8 +287,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FDFBCF323B9B0C10008AD7A /* RandomGenerator.swift in Sources */,
 				7F96EB14222D0A6C007E4528 /* ViewController.swift in Sources */,
+				7FB9BBC92248C02000F237DB /* WindowController.swift in Sources */,
+				7F9C324122337258003773E5 /* Organism.swift in Sources */,
+				7FE4022523C13B0F00C7E0C3 /* World.swift in Sources */,
 				7F96EB12222D0A6C007E4528 /* AppDelegate.swift in Sources */,
+				7F96EB3E222D0F0D007E4528 /* GraphView.swift in Sources */,
+				7FE4022323C1362900C7E0C3 /* Graphics.swift in Sources */,
+				7FDFBCF523BC52380008AD7A /* Statistics.swift in Sources */,
+				7FE4022723C175E700C7E0C3 /* Genealogy.swift in Sources */,
+				7FE4022923C27E4400C7E0C3 /* Genome.swift in Sources */,
+				7FDFBCF123B5E4CD0008AD7A /* Food.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +465,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Life Machine/Life_Machine.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 238U5ZFPU8;
@@ -432,7 +476,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "bitsparks.com.Life-Machine";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -441,6 +485,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Life Machine/Life_Machine.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 238U5ZFPU8;
@@ -451,7 +496,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "bitsparks.com.Life-Machine";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -471,7 +516,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "bitsparks.com.Life-MachineTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Life Machine.app/Contents/MacOS/Life Machine";
 			};
 			name = Debug;
@@ -492,7 +537,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "bitsparks.com.Life-MachineTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Life Machine.app/Contents/MacOS/Life Machine";
 			};
 			name = Release;
@@ -512,7 +557,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "bitsparks.com.Life-MachineUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = "Life Machine";
 			};
 			name = Debug;
@@ -532,7 +577,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "bitsparks.com.Life-MachineUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = "Life Machine";
 			};
 			name = Release;
