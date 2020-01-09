@@ -291,13 +291,13 @@ class Organism: NSObject {
         
         complexity = Int(GENOME.genotype[0].getValue() * 7.0)
         direction = GENOME.genotype[1].getValue() * 360
-        speedFactor = GENOME.genotype[2].getValue() * 3.5
+        speedFactor = GENOME.genotype[2].getValue() * (4.0 * GENOME.genotype[4].getValue())
         
         lookDirection = GENOME.genotype[3].getValue() * 360
-        lookDistance = 150 * (GENOME.genotype[4].getValue())
+        lookDistance = (GENOME.genotype[4].getValue()) * 100
         lookArc = 20 - (GENOME.genotype[5].getValue() * 4)
         
-        energyEfficiency = GENOME.genotype[7].getValue() * 14
+        energyEfficiency = GENOME.genotype[7].getValue() * (15 * GENOME.genotype[4].getValue())
         regenRate = GENOME.genotype[8].getValue() * 3.9
         regenBase = (GENOME.genotype[9].getValue()) * 300
         regenAvail = regenBase

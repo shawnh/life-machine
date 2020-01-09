@@ -61,7 +61,12 @@ class GeneGroup {
     var RAND = LMRandomGenerator()
     
     public func getValue() -> Double {
-        return (link[0].getValue() + link[1].getValue() + link[2].getValue()) / 3
+        let a = link[0].getValue()
+        let b = link[1].getValue()
+        let c = link[2].getValue()
+        let x = (link[0].getValue() + link[1].getValue()) / 2
+        let s = (c >= 0.5) ? -1.0 : 1.0
+        return abs(pow(x, 3) + (a * pow(x, 2) * s) + (b * x * s) + c)
     }
     
     init(_ g1: Gene, _ g2: Gene, _ g3: Gene) {
